@@ -37,10 +37,10 @@ class Http implements Proto{
     
     //此方法负责写请求行
     protected function setLine($method){
-        $this->line[0] = $method.' '.$this->urlInfo['query'].'?'.$this->urlInfo['path'].' '.'HTTP/1.1';
+        $this->line[0] = $method.' '.$this->urlInfo['path'].'?'.$this->urlInfo['query'].' '.'HTTP/1.1';
     }
     //此方法负责写头信息
-    protected function setHeader($headerLine){
+    public function setHeader($headerLine){
         $this->header[] = $headerLine;
     }
     //此方法负责写主体信息
