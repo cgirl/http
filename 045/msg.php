@@ -16,5 +16,5 @@ $msg = array(
 
 file_put_contents('./res.html', $http->post($msg));
 //echo $http->post($msg);
-//37分钟
+
 ?>

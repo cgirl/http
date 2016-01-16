@@ -55,6 +55,11 @@ class Http implements Proto{
             $this->urlInfo['port'] = 80;
         }
         
+        //判断参数
+        if (!isset($this->urlInfo['query'])){
+        	$this->urlInfo['query'] = '';
+        }
+        
         $this->fh = fsockopen($this->urlInfo['host'], $this->urlInfo['port'], $this->errno, $this->errstr, 3);
     }
     
